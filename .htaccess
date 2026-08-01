@@ -1,0 +1,12 @@
+# ───────────────────────────────────────────────────────────
+# Redirects for retired WordPress URLs (index.php/...)
+# Deployed on SDSU RohanCP (Apache). Jekyll copies this file into
+# _site because ".htaccess" is in the `include:` list in _config.yml.
+# ───────────────────────────────────────────────────────────
+RewriteEngine On
+RewriteRule ^index\.php/?$ / [R=301,L]
+RewriteRule ^index\.php/ens-lab/zhao-lab/?$ / [R=301,L]
+RewriteRule ^index\.php/contact_page/?$ /contact/ [R=301,L]
+RewriteRule ^index\.php/ens-lab/?$ /facilities/ [R=301,L]
+RewriteRule ^index\.php/2023/12/27/micro-and-macro-algae/?$ /research-projects/ [R=301,L]
+RewriteRule ^index\.php/.*$ - [G,L]

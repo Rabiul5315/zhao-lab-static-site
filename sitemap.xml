@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://jzhao.sdsu.edu/about/</loc>
-</url>
-<url>
 <loc>https://jzhao.sdsu.edu/contact/</loc>
 </url>
 <url>
@@ -13,21 +10,12 @@
 <loc>https://jzhao.sdsu.edu/</loc>
 </url>
 <url>
-<loc>https://jzhao.sdsu.edu/news/</loc>
-</url>
-<url>
-<loc>https://jzhao.sdsu.edu/opportunities/</loc>
-</url>
-<url>
 <loc>https://jzhao.sdsu.edu/people/</loc>
-</url>
-<url>
-<loc>https://jzhao.sdsu.edu/projects/</loc>
 </url>
 <url>
 <loc>https://jzhao.sdsu.edu/publications/</loc>
 </url>
 <url>
-<loc>https://jzhao.sdsu.edu/research-areas/</loc>
+<loc>https://jzhao.sdsu.edu/research-projects/</loc>
 </url>
 </urlset>
