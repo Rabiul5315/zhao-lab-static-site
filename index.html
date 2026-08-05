@@ -104,23 +104,24 @@
 </header>
 
   <main id="main-content">
-    
-
-
-
-<div class="photo-carousel" id="home-photos">
-  <div class="photo-carousel__track">
-    
-      <figure class="photo-carousel__slide is-active" data-index="0">
-        <img src="/assets/images/team/team-2026-01.jpg" alt="Lab group photo">
-        
-      </figure>
-    
+    <div class="container home-hero-wrap">
+  <div class="home-hero">
+    <picture>
+      <source type="image/webp"
+              srcset="/assets/images/lab/zhao-lab-homepage-group-1024.webp 1024w,
+                      /assets/images/lab/zhao-lab-homepage-group.webp 2048w"
+              sizes="(max-width: 1120px) 100vw, 1120px">
+      <img class="home-hero__img"
+           src="/assets/images/lab/zhao-lab-homepage-group.jpg"
+           srcset="/assets/images/lab/zhao-lab-homepage-group-1024.jpg 1024w,
+                   /assets/images/lab/zhao-lab-homepage-group.jpg 2048w"
+           sizes="(max-width: 1120px) 100vw, 1120px"
+           width="2048" height="1152"
+           alt="Members of The Zhao Food Chemistry Lab gathered outdoors at a group celebration."
+           fetchpriority="high" decoding="async">
+    </picture>
   </div>
-
-  
 </div>
-
 
 <section class="section home-intro">
   <div class="container">
@@ -182,10 +183,16 @@
   </div>
 
   <div class="container site-footer__bottom">
+    <a class="site-footer__ens" href="https://ens.sdsu.edu/">
+      <img src="/assets/images/branding/sdsu-ens-horizontal-reverse.png"
+           alt="San Diego State University School of Exercise and Nutritional Sciences"
+           width="700" height="82">
+    </a>
     <p>&copy; 2026 The Zhao Food Chemistry Lab. Built with Jekyll and hosted by San Diego State University.</p>
   </div>
 </footer>
 
   <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/group-photo-carousel.js" defer></script>
 </body>
 </html>
