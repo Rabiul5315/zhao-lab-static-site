@@ -113,19 +113,17 @@
 
 <div class="container page-content">
   <!-- ─────────────────────────────────────────────────────────────
-     EQUIPMENT CARD GRID
-     Each card = one photo (top) + name + short description (below),
-     four across on desktop. To ADD a new piece of equipment:
-       1. Put its photo in  assets/images/lab/  (e.g. my-machine.jpg)
-       2. Copy ONE full <div class="equipment-card"> … </div> block
-          below, paste it before the closing </div> of the grid,
-          and change the image path, name, and description.
-     A ready-to-copy blank template is in the comment at the very
-     bottom of this file.
+     EQUIPMENT CARD GRID  (now data-driven)
+     The cards below are generated from  _data/facilities.yml .
+     To ADD a new piece of equipment:
+       1. Put its photo in  assets/images/facilities/  (or assets/images/lab/)
+       2. Add ONE record to  _data/facilities.yml
+       3. Commit the change
+     No need to edit this file for routine equipment additions.
 ────────────────────────────────────────────────────────────── -->
 
 <div class="grid grid--4">
-
+  
   <div class="equipment-card">
     <div class="equipment-card__photo">
       <img src="/assets/images/lab/gc-ms-8890.jpg" alt="Agilent 8890 GC System with Gerstel olfactory detection port" />
@@ -135,7 +133,7 @@
       <p class="equipment-card__desc">Agilent 8890 GC + 5977C MSD with Gerstel ODP 4 olfactory detection port.</p>
     </div>
   </div>
-
+  
   <div class="equipment-card">
     <div class="equipment-card__photo">
       <img src="/assets/images/lab/soxtec-st255.jpg" alt="FOSS Soxtec ST 255 fat extractor" />
@@ -145,7 +143,7 @@
       <p class="equipment-card__desc">FOSS ST 255. Semi-automated solvent extraction for crude fat, total fat, and extractable matter.</p>
     </div>
   </div>
-
+  
   <div class="equipment-card">
     <div class="equipment-card__photo">
       <img src="/assets/images/lab/amino-acid-analyzer-l8900.jpg" alt="Hitachi L-8900 amino acid analyzer" />
@@ -155,7 +153,7 @@
       <p class="equipment-card__desc">Hitachi L-8900. Analyzes amino acid composition of proteins and hydrolysates.</p>
     </div>
   </div>
-
+  
   <div class="equipment-card">
     <div class="equipment-card__photo">
       <img src="/assets/images/lab/centrifuge-rt6000b.jpg" alt="Sorvall RT6000B refrigerated centrifuge" />
@@ -165,7 +163,7 @@
       <p class="equipment-card__desc">Sorvall RT6000B refrigerated benchtop centrifuge.</p>
     </div>
   </div>
-
+  
   <div class="equipment-card">
     <div class="equipment-card__photo">
       <img src="/assets/images/lab/centrifuge-5810r.jpg" alt="Eppendorf 5810 R centrifuge" />
@@ -175,7 +173,7 @@
       <p class="equipment-card__desc">Eppendorf 5810 R refrigerated benchtop centrifuge.</p>
     </div>
   </div>
-
+  
   <div class="equipment-card">
     <div class="equipment-card__photo">
       <img src="/assets/images/lab/sensory-lab-psfa428.jpg" alt="Sensory evaluation booths in PSFA room 428" />
@@ -185,7 +183,7 @@
       <p class="equipment-card__desc">Five booths in PSFA 428, each with a sink and serving hatch, plus an adjoining food-prep kitchen (PSFA 424).</p>
     </div>
   </div>
-
+  
 </div>
 
 <div class="facility-section" style="margin-top: 56px;">
@@ -245,21 +243,6 @@
   </div>
 </div>
 
-<!-- ─────────────────────────────────────────────────────────────
-     BLANK TEMPLATE — copy everything between the two dashed lines,
-     paste it inside the <div class="grid grid--4"> above, then
-     replace the image path, name, and description.
-
-     <div class="equipment-card">
-       <div class="equipment-card__photo">
-         <img src="/assets/images/lab/YOUR-IMAGE.jpg" alt="DESCRIBE THE EQUIPMENT">
-       </div>
-       <div class="equipment-card__body">
-         <p class="equipment-card__name">EQUIPMENT NAME</p>
-         <p class="equipment-card__desc">Brand, model, and a short note about what it does.</p>
-       </div>
-     </div>
-────────────────────────────────────────────────────────────── -->
 
 </div>
 

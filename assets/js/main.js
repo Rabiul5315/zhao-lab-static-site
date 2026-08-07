@@ -30,27 +30,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
-  // Photo carousels (e.g. People page group photos). Generic —
-  // works for any number of .photo-carousel elements on a page.
-  document.querySelectorAll(".photo-carousel").forEach(function (carousel) {
-    var slides = Array.prototype.slice.call(carousel.querySelectorAll(".photo-carousel__slide"));
-    var dots = Array.prototype.slice.call(carousel.querySelectorAll(".photo-carousel__dot"));
-    var prevBtn = carousel.querySelector(".photo-carousel__arrow--prev");
-    var nextBtn = carousel.querySelector(".photo-carousel__arrow--next");
-    var current = 0;
-
-    function show(index) {
-      if (slides.length === 0) return;
-      current = (index + slides.length) % slides.length;
-      slides.forEach(function (slide, i) { slide.classList.toggle("is-active", i === current); });
-      dots.forEach(function (dot, i) { dot.classList.toggle("is-active", i === current); });
-    }
-
-    if (nextBtn) nextBtn.addEventListener("click", function () { show(current + 1); });
-    if (prevBtn) prevBtn.addEventListener("click", function () { show(current - 1); });
-    dots.forEach(function (dot, i) {
-      dot.addEventListener("click", function () { show(i); });
-    });
-  });
 });
