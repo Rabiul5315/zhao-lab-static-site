@@ -90,7 +90,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .section__more { margin-top: 22px; }
 .section__more a { color: var(--color-primary); font-weight: 600; text-decoration: none; }
 .section__more a:hover { text-decoration: underline; }
-.section-subhead { font-family: var(--font-display); font-size: 1.3rem; margin: 44px 0 16px; }
+.section-subhead { font-family: var(--font-display); font-size: 1.3rem; margin: 36px 0 14px; }
 
 .eyebrow {
   font-family: var(--font-mono);
@@ -348,13 +348,17 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .badge--placeholder { background: var(--color-placeholder-bg); color: var(--color-placeholder-text); }
 
 /* ── Inner page header / content ────────────────────────── */
-.page-header { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 56px 0 40px; }
-.page-header__title { font-family: var(--font-display); font-size: 2.2rem; margin: 8px 0 10px; }
+.page-header { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 44px 0 26px; }
+.page-header__title { font-family: var(--font-display); font-size: 2.2rem; margin: 0 0 10px; }
 .page-header__subtitle { color: var(--color-muted); font-size: 1.05rem; max-width: 680px; margin: 0; }
-.page-content { padding: 48px 0 72px; }
-.page-content h2 { font-family: var(--font-display); font-size: 1.5rem; margin: 40px 0 16px; }
+/* padding-block only: preserves the .container 24px horizontal padding so page
+   content aligns with the page-header title on the same left axis. */
+.page-content { padding-block: 28px 64px; }
+.page-content h2 { font-family: var(--font-display); font-size: 1.5rem; margin: 36px 0 14px; }
 .page-content ul { padding-left: 1.2rem; }
 .page-content p { margin: 0 0 16px; }
+/* First section follows the header with one consistent gap (no extra top margin) */
+.page-content > *:first-child { margin-top: 0; }
 .page-footnote {
   font-size: 0.85rem;
   color: var(--color-muted);
@@ -372,7 +376,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   box-shadow: var(--shadow-sm);
 }
 .equipment-card__photo { aspect-ratio: 4 / 3; overflow: hidden; background: var(--color-surface); }
-.equipment-card__photo img { width: 100%; height: 100%; object-fit: cover; }
+.equipment-card__photo img { width: 100%; height: 100%; object-fit: contain; }
 .equipment-card__body { padding: 16px 18px; }
 .equipment-card__name { font-family: var(--font-display); font-size: 1rem; margin: 0 0 4px; }
 .equipment-card__desc { font-size: 0.88rem; color: var(--color-muted); margin: 0; }
