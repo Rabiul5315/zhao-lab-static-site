@@ -156,16 +156,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   gap: 16px;
 }
 .site-header__brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-text); }
+/* Approved Zhao Food Chemistry Lab seal (vector; 1:1 aspect ratio kept) */
 .site-header__mark {
-  width: 40px; height: 40px;
-  border-radius: 8px;
-  background: var(--color-primary);
-  color: #fff;
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 15px;
+  width: 52px; height: 52px;
+  display: block;
   flex-shrink: 0;
+}
+@media (max-width: 880px) {
+  .site-header__mark { width: 44px; height: 44px; }
 }
 .site-header__name-main { font-family: var(--font-display); font-weight: 700; font-size: 17px; white-space: nowrap; }
 
@@ -666,12 +664,8 @@ a.project-tile:hover .project-tile__photo { box-shadow: var(--shadow-md); }
 .tile-grad--2 { background: linear-gradient(135deg, #2d2828, #5a4f4f); }
 .tile-grad--3 { background: linear-gradient(135deg, #d41736, #8a5a00); }
 
-/* ── Content adjustments for the July 2026 content update ── */
-/* Full-width homepage intro (Recent News sidebar removed) */
+/* Full-width homepage intro (no sidebar) */
 .home-intro__main--full { max-width: 820px; }
-
-/* (Member-card text links were replaced by the icon-only row in the
-   "Cards: people" section above — see member-card.html.) */
 
 /* Rich project cards on the consolidated Research Projects page
    (reuses the existing .project-card look) */
