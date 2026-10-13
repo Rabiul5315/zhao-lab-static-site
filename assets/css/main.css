@@ -700,7 +700,9 @@ a.project-tile:hover .project-tile__photo { box-shadow: var(--shadow-md); }
 /* Description separated by a hairline for a calmer scan rhythm */
 .project-card .project-card__desc { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--color-border); }
 
-/* Compact variant for Previous Projects (simpler than current ones) */
+/* Compact variant for Previous Projects (simpler than current ones).
+   Metadata is shown as labelled lines: Funding Support, Project Duration,
+   Collaborators, Team Members. Absent fields render nothing at all. */
 .project-card--compact { padding: 18px 20px; border-left-width: 3px; }
 .project-card--compact .project-card__codename {
   background: transparent;
@@ -710,11 +712,58 @@ a.project-tile:hover .project-tile__photo { box-shadow: var(--shadow-md); }
   font-size: 0.98rem;
   font-weight: 700;
   color: var(--color-text);
-  margin: 0 0 6px;
+  margin: 0 0 10px;
   line-height: 1.35;
 }
-.project-card--compact .project-card__team { margin: 0; font-size: 0.82rem; }
-.project-card--compact .project-card__desc { font-size: 0.84rem; margin-top: 8px; padding-top: 8px; }
+.project-card--compact .project-card__meta,
+.project-card--compact .project-card__team {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--color-text);
+  margin: 0 0 5px;
+  overflow-wrap: anywhere;      /* long names/lists wrap instead of overflowing */
+}
+.project-card--compact .project-card__team { margin-bottom: 0; }
+/* Underlined so a linked funding organization is distinguishable from the
+   red metadata label beside it. */
+.project-card--compact .project-card__meta a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+.project-card--compact .project-card__meta a:hover,
+.project-card--compact .project-card__meta a:focus-visible { color: var(--color-primary-bright); }
+.project-card--compact .project-card__desc { font-size: 0.84rem; margin-top: 10px; padding-top: 10px; }
+
+/* Previous Projects: cards flow down two columns at their natural height,
+   so a long record never leaves an empty row track beside short ones.
+   Uses CSS multi-column layout (no JavaScript). Reading and keyboard order
+   follow the document order: down the left column, then the right. Column
+   edges and gap match the two-column Current Projects grid above. */
+.project-masonry { column-count: 2; column-gap: 20px; }
+/* Spacing is padding on a wrapper rather than a card margin: margins can be
+   dropped at the end of a column, which made the space below the layout
+   vary by width; padding is always kept. */
+.project-masonry__item {
+  break-inside: avoid;
+  page-break-inside: avoid;            /* older engines */
+  -webkit-column-break-inside: avoid;  /* older Safari */
+  padding-bottom: 20px;
+}
+@media (max-width: 640px) { .project-masonry { column-count: 1; } }
+
+/* "Additional Previous Projects" subsection: secondary to the detailed
+   records above — smaller heading, lighter and denser cards. */
+.page-content .subsection-head {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  margin: 16px 0 12px;
+  color: var(--color-text);
+}
+.subsection-head[id] { scroll-margin-top: 90px; }
+.project-card--minor { padding: 14px 18px; box-shadow: none; }
+.project-card--minor .project-card__codename { font-size: 0.92rem; margin-bottom: 6px; }
 
 /* ── Responsive table wrapper (horizontal scroll on small screens) ── */
 .table-wrap { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
